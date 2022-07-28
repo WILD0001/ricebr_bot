@@ -35,8 +35,8 @@ def check_msg(chat_id, msg, user_id, new_member=False):
 
 
 load_dotenv(verbose=True)
-TOKEN = getenv("TOKEN")
-TELEGRAM = Telepot('TOKEN')
+
+TELEGRAM = Telepot("5473530493:AAFDdME3AWqMP72yC-NNsv7M3N8zvILIYGE")
 
 BOTNAME = getenv("BOTNAME")
 WHEN_MENTIONED = getenv("MENTION")
