@@ -35,7 +35,7 @@ def check_msg(chat_id, msg, user_id, new_member=False):
 
 
 load_dotenv(verbose=True)
-TG_TOKEN = getenv("TOKEN")
+TOKEN = getenv("TOKEN")
 TELEGRAM = Telepot(TOKEN)
 
 BOTNAME = getenv("BOTNAME")
