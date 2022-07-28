@@ -21,7 +21,7 @@ def check_msg(chat_id, msg, user_id, new_member=False):
 
     if new_member or (WHEN_MENTIONED and BOTNAME in message):
         res = BOT.reply("localuser", msg)
-        if(res != "[ERR: No Reply Matched]"):
+        
             TELEGRAM.sendMessage(chat_id,
                                  res,
                                  parse_mode='Markdown',
