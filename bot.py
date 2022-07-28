@@ -7,9 +7,6 @@ from os import getenv
 
 
 def handle(msg):
-    """
-    TODO
-    """
     content_type, _chat_type, chat_id = glance(msg)
 
     new_member = (True if content_type == 'new_chat_member' else False)
@@ -20,9 +17,6 @@ def handle(msg):
 
 
 def check_msg(chat_id, msg, user_id, new_member=False):
-    """
-    TODO
-    """
     message = msg.lower().split()
 
     if new_member or (WHEN_MENTIONED and BOTNAME in message):
