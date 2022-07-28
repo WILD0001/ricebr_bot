@@ -38,7 +38,7 @@ WHEN_MENTIONED = getenv("MENTION")
 TELEGRAM.message_loop(handle)
 print('Listening ...','mure')
 
-BOT = RiveScript(res)
+BOT = RiveScript(utf8=True)
 BOT.load_directory("./brain")
 BOT.sort_replies()
 
