@@ -21,7 +21,7 @@ def check_msg(chat_id, msg, user_id, new_member=False):
 
     if new_member or (WHEN_MENTIONED and BOTNAME in message):
         res = BOT.reply("localuser", msg)
-        
+        if(res != "[ERR: No Reply Matched]"):
             TELEGRAM.sendMessage(chat_id,
                                  res,
                                  parse_mode='Markdown',
@@ -30,7 +30,7 @@ def check_msg(chat_id, msg, user_id, new_member=False):
 
 load_dotenv(verbose=True)
 
-TELEGRAM = Telepot("5473530493:AAFDdME3AWqMP72yC-NNsv7M3N8zvILIYGE")
+TELEGRAM = Telepot("5473530493:AAEcCI7hRmokekXNk3nlEgCllicPacKIPko")
 
 BOTNAME = getenv("BOTNAME")
 WHEN_MENTIONED = getenv("MENTION")
@@ -38,7 +38,7 @@ WHEN_MENTIONED = getenv("MENTION")
 TELEGRAM.message_loop(handle)
 print('Listening ...','mure')
 
-BOT = RiveScript()
+BOT = RiveScript(res)
 BOT.load_directory("./brain")
 BOT.sort_replies()
 
